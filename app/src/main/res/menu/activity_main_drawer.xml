@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/wallet"
+            android:icon="@mipmap/wallet"
+            android:checkable="true"
+            android:title="   我的钱包" />
+        <item
+            android:id="@+id/push"
+            android:icon="@mipmap/fabu2"
+            android:checkable="true"
+            android:title="   我发布的" />
+        <item
+            android:id="@+id/out"
+            android:icon="@mipmap/sle"
+            android:checkable="true"
+            android:title="   我卖出的" />
+        <item
+            android:id="@+id/buyin"
+            android:icon="@mipmap/dingdan"
+            android:checkable="true"
+            android:title="   我买入的" />
+        <item
+            android:id="@+id/call"
+            android:icon="@mipmap/kefu"
+            android:checkable="true"
+            android:title="   客服" />
+        <item
+            android:id="@+id/setting"
+            android:icon="@mipmap/shezhi"
+            android:checkable="true"
+            android:title="   设置" />
+    </group>
+</menu>

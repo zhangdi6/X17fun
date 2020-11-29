@@ -1,0 +1,4 @@
+rootProject.name='X17fun'
+include ':app'
+include ':faceplatform'
+include ':faceplatform-ui'

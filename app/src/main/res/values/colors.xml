@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#333333</color>
+    <color name="red">#F24F32</color>
+    <color name="gray_dark">#CECECE</color>
+    <color name="gray_little">#f5f5f5</color>
+    <color name="tv666">#666666</color>
+    <color name="tv333">#333333</color>
+    <color name="tv999">#8F8F8F</color>
+    <color name="yx_f6f6">#f6f6f6</color>
+    <color name="yellow">#FFCC33</color>
+    <color name="jia">#F7B708</color>
+    <color name="gongsi">#3B75D7</color>
+    <color name="xueixao">#72B34D</color>
+    <color name="blue_nomal">#333333</color>
+</resources>

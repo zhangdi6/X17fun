@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/toUserLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/head_img"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            android:layout_below="@id/time"
+            android:layout_marginVertical="@dimen/dp_8"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_6" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingVertical="@dimen/dp_8"
+            android:text="2019-8-22 11:22:23"
+            android:textColor="@color/tv999"
+            android:textSize="@dimen/sp_11" />
+
+        <TextView
+            android:id="@+id/touser_talk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/head_img"
+
+            android:layout_toRightOf="@id/head_img"
+            android:background="@drawable/chat_conner_gray"
+            android:lineSpacingExtra="@dimen/dp_3"
+            android:maxWidth="@dimen/dp_280"
+            android:padding="@dimen/dp_12"
+            android:text=""
+            android:textColor="@color/tv333"
+            android:textSize="@dimen/sp_14" />
+
+        <com.x.x17fun.custom.RoundImageView4dp
+            android:id="@+id/chat_img_touser"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_150"
+            android:layout_alignTop="@id/head_img"
+            android:layout_toRightOf="@id/head_img"
+            android:background="@drawable/chat_conner_gray"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/user_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+        <ImageView
+            android:id="@+id/head_img2"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            android:layout_below="@id/time2"
+            android:layout_alignParentEnd="true"
+            android:layout_marginVertical="@dimen/dp_8"
+            android:layout_marginStart="@dimen/dp_6"
+            android:layout_marginEnd="@dimen/dp_16" />
+        <TextView
+            android:id="@+id/time2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingVertical="@dimen/dp_8"
+            android:text="2019-8-22 11:22:23"
+            android:textColor="@color/tv999"
+            android:textSize="@dimen/sp_11" />
+
+        <TextView
+            android:id="@+id/user_talk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/time2"
+            android:layout_marginVertical="@dimen/dp_8"
+            android:layout_toLeftOf="@id/head_img2"
+            android:background="@drawable/chat_conner_green"
+            android:lineSpacingExtra="@dimen/dp_3"
+            android:maxWidth="@dimen/dp_280"
+            android:padding="@dimen/dp_12"
+            android:text=""
+            android:textColor="@color/tv333"
+            android:textSize="@dimen/sp_14" />
+
+        <com.x.x17fun.custom.RoundImageView4dp
+            android:id="@+id/chat_img_user"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_150"
+            android:layout_alignTop="@id/head_img2"
+            android:layout_marginVertical="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_6"
+            android:layout_toLeftOf="@id/head_img2"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

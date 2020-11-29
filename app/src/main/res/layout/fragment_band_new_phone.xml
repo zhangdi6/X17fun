@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#F4F4F4"
+    tools:context=".ui.fragment.SaleFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/tab"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="@dimen/dp_20"
+            android:paddingVertical="@dimen/dp_17"
+            android:src="@mipmap/back_black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="绑定新手机号"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_16"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#f5f5f5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/dp_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="新手机号"
+                android:gravity="center_vertical"
+                android:textColor="@color/tv333"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/sp_14"
+                android:textColor="@color/tv333"
+                android:text="+86"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:layout_marginRight="@dimen/dp_16"
+                />
+            <EditText
+                android:id="@+id/et_phone"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:hint="请输入新手机号"
+                android:textColor="@color/tv333"
+                android:textSize="@dimen/sp_14"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/tv666"
+                android:textSize="@dimen/sp_12"
+                android:background="@drawable/text_bg_gray_30"
+                android:layout_marginVertical="@dimen/dp_8"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#f5f5f5"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_50"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="验证码"
+                android:gravity="center_vertical"
+                android:textColor="@color/tv333"
+                android:textSize="@dimen/sp_15" />
+
+            <EditText
+                android:id="@+id/et_verify"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:hint="请输入验证码"
+                android:textColor="@color/tv333"
+                android:textSize="@dimen/sp_14"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/get_verify"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:paddingVertical="@dimen/dp_4"
+                android:paddingHorizontal="@dimen/dp_8"
+                android:gravity="center_vertical"
+                android:background="@drawable/conner_skocke_gray"
+                android:layout_marginVertical="@dimen/dp_8"
+                android:textSize="@dimen/sp_12"
+                android:text="获取验证码"
+                android:textColor="#666666"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#f5f5f5"/>
+
+        <TextView
+            android:id="@+id/update"
+            android:textColor="#333333"
+            android:textSize="@dimen/sp_14"
+            android:text="完成"
+            android:background="@drawable/conner_yellow_8dp"
+            android:gravity="center"
+            android:paddingVertical="@dimen/dp_6"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>

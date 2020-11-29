@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tag"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="wrap_content"
+
+        android:layout_marginEnd="@dimen/dp_8"
+        android:background="@drawable/jia"
+        android:gravity="center"
+        android:layout_alignTop="@id/title"
+        android:layout_alignBottom="@+id/title"
+
+        android:text="家"
+        android:textColor="@color/jia"
+        android:textSize="@dimen/dp_12" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_18"
+        android:layout_marginTop="10dp"
+
+
+        android:layout_toRightOf="@id/tag"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="望京SOHO塔二C座506"
+        android:textColor="@color/tv333"
+        android:textSize="@dimen/sp_14"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginVertical="@dimen/dp_8"
+        android:text="欧阳下单"
+        android:textColor="@color/tv999"
+        android:textSize="@dimen/sp_11" />
+
+    <TextView
+        android:id="@+id/sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginVertical="@dimen/dp_8"
+        android:layout_marginStart="@dimen/dp_4"
+        android:layout_toRightOf="@+id/name"
+        android:text="先生"
+        android:textColor="@color/tv999"
+        android:textSize="@dimen/sp_11" />
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginVertical="@dimen/dp_8"
+        android:layout_toRightOf="@id/sex"
+        android:text="17630360083"
+        android:textColor="@color/tv999"
+        android:textSize="@dimen/sp_11" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/name"
+        android:background="#f5f5f5" />
+</RelativeLayout>

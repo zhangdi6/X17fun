@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.RemarkFragment">
+
+   <android.support.constraint.ConstraintLayout
+           android:id="@+id/tab"
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/dp_60"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent">
+
+       <ImageView
+           android:id="@+id/back"
+           android:layout_width="@dimen/dp_50"
+           android:layout_height="0dp"
+           android:paddingHorizontal="@dimen/dp_20"
+           android:paddingVertical="@dimen/dp_17"
+           android:src="@mipmap/back_black"
+           app:layout_constraintBottom_toTopOf="@+id/view15"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+
+       <TextView
+           android:id="@+id/title"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="评价"
+           android:textColor="@color/black"
+           android:textSize="@dimen/sp_16"
+           app:layout_constraintBottom_toTopOf="@+id/view15"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+
+       <TextView
+           android:id="@+id/ok"
+           android:layout_width="@dimen/dp_60"
+           android:layout_height="0dp"
+           android:gravity="center"
+           android:text="发布"
+           android:textColor="#FFCC33"
+           app:layout_constraintBottom_toTopOf="@+id/view15"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintTop_toTopOf="@+id/back" />
+
+
+       <View
+           android:id="@+id/view15"
+           android:layout_width="match_parent"
+           android:layout_height="@dimen/dp_8"
+           android:background="#f5f5f5"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent" />
+   </android.support.constraint.ConstraintLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/product_img"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_100"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginVertical="@dimen/dp_12"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/product_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/product_img"
+                    android:gravity="center_horizontal"
+                    android:text="红烧茄子"
+                    android:textColor="@color/tv333"
+
+                    android:textSize="@dimen/sp_18" />
+                <RelativeLayout
+                    android:id="@+id/layout"
+                    android:layout_width="match_parent"
+                    android:layout_marginVertical="@dimen/dp_12"
+                    android:layout_below="@id/product_name"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_height="wrap_content">
+                    <com.x.x17fun.custom.RatingBar
+                        android:id="@+id/ratingbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:starCount="5"
+                        android:gravity="center"
+                        android:layout_centerHorizontal="true"
+                        app:starEmpty="@mipmap/xinghei"
+                        app:starFill="@mipmap/xinghuang"
+                        app:starHalf="@mipmap/xinghuang"
+                        app:starImageSize="@dimen/dp_28"
+                        app:starPadding="@dimen/dp_16"
+                        app:starStep="5"
+                        app:stepSize="Full" />
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/remark_level"
+                    android:textColor="@color/yellow"
+                    android:textSize="@dimen/sp_14"
+                    android:layout_below="@id/layout"
+                    android:text="无可挑剔，强烈推荐"
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_120"
+                    android:layout_below="@id/remark_level"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <EditText
+                        android:id="@+id/edit_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_remark_edit"
+                        android:gravity="top"
+                        android:paddingBottom="@dimen/dp_20"
+                        android:textSize="@dimen/sp_13"
+                        android:maxLength="120"
+                        android:textColorHint="@color/tv333"
+                        android:hint="亲，分享一下您的感受吧，可以帮助更多小伙伴哦~"
+                        android:paddingHorizontal="@dimen/dp_16"
+                        android:paddingTop="@dimen/dp_16" />
+
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rlv"
+                    android:layout_width="match_parent"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/relativeLayout"
+                    android:layout_marginTop="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginBottom="@dimen/dp_44"
+                    android:layout_below="@id/rlv"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/img_check"
+                        android:layout_width="@dimen/dp_18"
+                        android:layout_height="@dimen/dp_18"
+                        android:background="@mipmap/weixuan" />
+
+                    <TextView
+                        android:textColor="@color/tv333"
+                        android:text="匿名评价"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:textSize="@dimen/sp_14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </android.support.v4.widget.NestedScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/talk_head"
+        android:layout_width="@dimen/dp_44"
+        android:layout_height="@dimen/dp_44"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@+id/talk_head"
+        app:layout_constraintTop_toTopOf="@+id/talk_head">
+
+        <TextView
+            android:id="@+id/talk_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="酸菜鱼"
+            android:textColor="@color/tv999"
+            android:textSize="@dimen/sp_13" />
+
+        <TextView
+            android:id="@+id/talk_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="@dimen/dp_3"
+            android:paddingVertical="@dimen/dp_1"
+            android:textColor="@color/white"
+            android:textSize="8sp" />
+
+
+        <TextView
+            android:id="@+id/talk_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_marginStart="8dp"
+            android:gravity="center_vertical"
+            android:text="2000-04-12  11:23"
+            android:textColor="@color/tv999"
+            android:textSize="@dimen/sp_11" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/zan"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+        <TextView
+            android:id="@+id/talk_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="2dp"
+            android:maxLines="5"
+            android:text=""
+            android:textColor="@color/tv333"
+            android:textSize="@dimen/sp_14" />
+
+
+    </LinearLayout>
+
+    <com.x.x17fun.custom.MultiImageView
+        android:id="@+id/gridview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="12dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout5"
+        app:layout_constraintStart_toEndOf="@+id/talk_head"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
+
+    <ImageView
+        android:id="@+id/zan"
+        android:layout_width="@dimen/dp_20"
+        android:layout_height="@dimen/dp_18"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="12dp"
+        android:background="@mipmap/xinxin"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout4" />
+
+    <TextView
+        android:id="@+id/zan_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:textColor="@color/tv333"
+        android:textSize="@dimen/sp_14"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/zan"
+        app:layout_constraintStart_toStartOf="@+id/zan"
+        app:layout_constraintTop_toBottomOf="@+id/zan" />
+
+    <View
+        android:id="@+id/view14"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="1dp"
+        android:background="#f5f5f5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridview" />
+</android.support.constraint.ConstraintLayout>

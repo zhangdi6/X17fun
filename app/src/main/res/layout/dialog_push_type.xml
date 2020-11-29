@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent">
+
+    <com.x.x17fun.custom.vague.BlurringView
+        android:id="@+id/blurring_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        app:blurRadius="25"
+        app:downsampleFactor="1"
+        app:overlayColor="#B3FFFFFF" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+       android:paddingBottom="@dimen/dp_60"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/ll_release"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="@dimen/dp_32"
+            android:layout_marginHorizontal="@dimen/dp_32"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/dongtai"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/dongtaii"
+                    android:layout_width="@dimen/dp_54"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="@dimen/dp_54"
+                    android:background="@mipmap/dongtaii"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_13"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_below="@id/dongtaii"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/tv333"
+                    android:text="动态"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/meal"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="@dimen/dp_54"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/meall"
+                    android:layout_height="@dimen/dp_54"
+                    android:background="@mipmap/meal"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_13"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_below="@id/meall"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/tv333"
+                    android:text="餐品"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/hope"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+                <ImageView
+                    android:id="@+id/hopee"
+                    android:layout_width="@dimen/dp_54"
+                    android:layout_centerHorizontal="true"
+
+                    android:layout_height="@dimen/dp_54"
+                    android:background="@mipmap/xinyuan"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/sp_13"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_below="@id/hopee"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/tv333"
+                    android:text="心愿"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/vague_cancle"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="@dimen/dp_44"
+            android:layout_below="@id/ll_release"
+            android:padding="@dimen/dp_10"
+            android:layout_centerHorizontal="true"
+            android:layout_height="@dimen/dp_44"
+            android:src="@mipmap/closenew"/>
+
+    </RelativeLayout>
+</RelativeLayout>

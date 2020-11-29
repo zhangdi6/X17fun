@@ -1,0 +1,148 @@
+apply plugin: 'com.android.application'
+android {
+    signingConfigs {
+        debug {
+            storeFile file('E:\\EndianCity\\X17fun\\debug.jks')
+            storePassword '123123'
+            keyAlias = '17fundebug'
+            keyPassword '123123'
+        }
+        release {
+            storeFile file('E:\\EndianCity\\X17fun\\release.jks')
+            storePassword '123123'
+            keyAlias = 'yiqifanrelease'
+            keyPassword '123123'
+        }
+    }
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        applicationId "com.x.x17fun"
+        minSdkVersion 17
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+
+    }
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+    lintOptions {
+        //checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+        incremental true
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled true
+            multiDexEnabled true
+            zipAlignEnabled true  //Zip代码压缩优化
+            shrinkResources true // 移除无用的resource文件
+            buildConfigField "boolean", "ENABLE_DEBUG", "true"
+            lintOptions {
+                checkReleaseBuilds false
+                abortOnError false
+                disable 'MissingTranslation'
+            }
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'android.arch.navigation:navigation-fragment:1.0.0'
+    implementation 'android.arch.navigation:navigation-ui:1.0.0'
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    implementation 'me.yokeyword:fragmentation:1.3.7'
+    implementation 'com.github.dzs-yaodi:Banner:1.2'
+    //今日头条屏幕适配
+    implementation 'me.jessyan:autosize:1.1.2'
+    //1.0.5 当1.1.0出现问题可以回退到1.0.5.1
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5.1'
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    implementation 'com.zhihu.android:matisse:0.5.1'
+    //easypermissions
+    implementation 'pub.devrel:easypermissions:2.0.1'
+    //rxLifeCycle
+    implementation 'com.trello.rxlifecycle2:rxlifecycle:2.0.1'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-android:2.0.1'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.0.1'
+    //RxJava2 Adapter
+    implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+    implementation 'com.android.support:multidex:1.+'
+    //retrofit
+    api 'com.squareup.retrofit2:retrofit:2.0.0'
+    api 'com.squareup.retrofit2:adapter-rxjava:2.0.0'
+    api 'com.squareup.retrofit2:converter-jackson:2.0.0'
+    api 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.3.0'
+    //eventbus
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    //微信支付
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:5.4.3'
+    //支付宝
+    api files('libs/alipaySdk-20180601.jar')
+    api files('libs/pinyin4j-2.5.0.jar')
+
+    //人脸识别
+    api project(path: ':faceplatform')
+    api project(path: ':faceplatform-ui')
+    //RxHttp
+    implementation 'com.rxjava.rxhttp:rxhttp:1.4.0'
+    //注解处理器，生成RxHttp类，即可一条链发送请求
+    annotationProcessor 'com.rxjava.rxhttp:rxhttp-compiler:1.4.0'
+    implementation 'com.rxjava.rxlife:rxlife:1.1.0'
+    //页面销毁，关闭请求，非必须
+    //非必须 根据自己需求选择Converter  RxHttp默认内置了GsonConverter
+    implementation 'com.rxjava.rxhttp:converter-jackson:1.4.0'
+    implementation 'com.rxjava.rxhttp:converter-fastjson:1.4.0'
+    implementation 'com.rxjava.rxhttp:converter-protobuf:1.4.0'
+    implementation 'com.rxjava.rxhttp:converter-simplexml:1.4.0'
+    //图片选择
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+    //时间选择
+    api 'com.weigan:loopView:0.2.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    api 'com.github.liys666666:DoubleClick:V2.0.6'
+    //添加
+    //侧滑列表
+    implementation 'com.github.fashare2015:StackLayout:1.0.0'
+    implementation files('libs/BaiduLBS_Android.jar')
+    implementation files('libs/component_common_sdk_1.2.0.jar')
+    implementation files('libs/IndoorscapeAlbumPlugin.jar')
+
+
+}

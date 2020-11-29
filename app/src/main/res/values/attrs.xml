@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="WaveView">
+        <attr name="waveColor" format="color|reference" />
+        <attr name="waveCount" format="integer" />
+        <attr name="waveCenterIcon" format="reference" />
+    </declare-styleable>
+
+
+    <!-- slide bar 有效内容背景 -->
+    <attr name="backgroundColor" format="color|reference" />
+    <!-- slide bar　描边 -->
+    <attr name="strokeColors" format="color|reference" />
+    <!-- slide bar 文字颜色 -->
+    <attr name="textColor" format="color|reference" />
+    <!-- slide bar　文字大小 -->
+    <attr name="textSize" format="dimension" />
+    <!-- slide bar 选中文字颜色 -->
+    <attr name="selectTextColor" format="color|reference" />
+    <!-- slide bar 选中文字大小 -->
+    <attr name="selectTextSize" format="dimension" />
+    <!-- slide bar　选中时候提示文字颜色 -->
+    <attr name="hintTextColor" format="color|reference" />
+    <!-- slide bar　选中时候提示文字大小 -->
+    <attr name="hintTextSize" format="dimension" />
+    <!-- slide bar　选中时候提示圆形半径 -->
+    <attr name="hintCircleRadius" format="dimension" />
+    <!-- slide bar　选中时候提示圆形颜色 -->
+    <attr name="hintCircleColor" format="color|reference" />
+    <!-- slide bar　选中时候提示背景形状 -->
+    <attr name="hintShape" format="enum" >
+        <enum name="circle" value="0" />
+        <enum name="rectangle" value="1" />
+    </attr>
+    <!-- slide bar　选中时候波浪颜色 -->
+    <attr name="waveColors" format="color|reference" />
+    <!-- slide bar　选中时候波浪半径 -->
+    <attr name="waveRadius" format="dimension" />
+    <!-- slide bar　里面文字上＋下padding -->
+    <attr name="contentPaddings" format="dimension" />
+    <!-- slide bar　上+下+右padding -->
+    <attr name="barPadding" format="dimension" />
+    <!-- slide bar　宽度 -->
+    <attr name="barWidth" format="dimension" />
+    <declare-styleable name="AZWaveSideBarView">
+        <!-- slide bar 有效内容背景 -->
+        <attr name="backgroundColor" />
+        <!-- slide bar　描边 -->
+        <attr name="strokeColor" />
+        <!-- slide bar 文字颜色 -->
+        <attr name="textColor" />
+        <!-- slide bar　文字大小 -->
+        <attr name="textSize" />
+        <!-- slide bar 选中文字颜色 -->
+        <attr name="selectTextColor" />
+        <!-- slide bar 选中文字大小 -->
+        <attr name="selectTextSize" />
+        <!-- slide bar　选中时候提示文字颜色 -->
+        <attr name="hintTextColor" />
+        <!-- slide bar　选中时候提示文字大小 -->
+        <attr name="hintTextSize" />
+        <!-- slide bar　选中时候提示圆形半径 -->
+        <attr name="hintCircleRadius" />
+        <!-- slide bar　选中时候提示圆形颜色 -->
+        <attr name="hintCircleColor" />
+        <!-- slide bar　选中时候波浪颜色 -->
+        <attr name="waveColor" />
+        <!-- slide bar　选中时候波浪半径 -->
+        <attr name="waveRadius" />
+        <!-- slide bar　里面文字上＋下padding -->
+        <attr name="contentPadding" />
+        <!-- slide bar　上+下+右padding -->
+        <attr name="barPadding" />
+        <!-- slide bar　宽度 -->
+        <attr name="barWidth" />
+    </declare-styleable>
+
+    <declare-styleable name="AZSideBarView">
+        <!-- slide bar 有效内容背景 -->
+        <attr name="backgroundColor" />
+        <!-- slide bar　描边 -->
+        <attr name="strokeColor" />
+        <!-- slide bar 文字颜色 -->
+        <attr name="textColor" />
+        <!-- slide bar　文字大小 -->
+        <attr name="textSize" />
+        <!-- slide bar 选中文字颜色 -->
+        <attr name="selectTextColor" />
+        <!-- slide bar 选中文字大小 -->
+        <attr name="selectTextSize" />
+        <!-- slide bar　选中时候提示文字颜色 -->
+        <attr name="hintTextColor" />
+        <!-- slide bar　选中时候提示文字大小 -->
+        <attr name="hintTextSize" />
+        <!-- slide bar　选中时候提示圆形半径 -->
+        <attr name="hintCircleRadius" />
+        <attr name="hintShape" />
+        <!-- slide bar　选中时候提示圆形颜色 -->
+        <attr name="hintCircleColor" />
+        <!-- slide bar　里面文字上＋下padding -->
+        <attr name="contentPadding" />
+        <!-- slide bar　上+下+右padding -->
+        <attr name="barPadding" />
+        <!-- slide bar　宽度 -->
+        <attr name="barWidth" />
+    </declare-styleable>
+
+    <!--自定义RatingBar-->
+    <declare-styleable name="RatingBar">
+        <!--尺寸值-->
+        <attr format="dimension" name="starImageSize"/>
+        <!--星星间距-->
+        <attr format="dimension" name="starPadding"/>
+        <!--星星总数-->
+        <attr format="integer" name="starCount"/>
+        <!--空白的星星资源文件值-->
+        <attr format="reference" name="starEmpty"/>
+        <!--满星资源文件值-->
+        <attr format="reference" name="starFill"/>
+        <!--半星资源文件值-->
+        <attr format="reference" name="starHalf"/>
+        <!--是否可点击boolean值-->
+        <attr format="boolean" name="clickable"/>
+        <!--当前进度float值-->
+        <attr format="float" name="starStep"/>
+        <!--每次进度方式的值，整星还是半星-->
+        <attr name="stepSize">
+            <enum name="Half" value="0"/>
+            <enum name="Full" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>

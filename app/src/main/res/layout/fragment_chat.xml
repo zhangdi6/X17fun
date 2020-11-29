@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.ChatFragment">
+
+      <android.support.constraint.ConstraintLayout
+              android:id="@+id/tab"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/dp_50"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent">
+
+              <ImageView
+                  android:id="@+id/back"
+                  android:layout_width="@dimen/dp_50"
+                  android:layout_height="match_parent"
+                  android:paddingHorizontal="@dimen/dp_20"
+                  android:paddingVertical="@dimen/dp_17"
+                  android:src="@mipmap/back_black"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent" />
+
+              <TextView
+                  android:id="@+id/title"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text=""
+                  android:textColor="@color/black"
+                  android:textSize="@dimen/sp_16"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent" />
+
+
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/dp_1"
+              android:background="#f5f5f5"
+              app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintStart_toStartOf="parent" />
+          </android.support.constraint.ConstraintLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:layout_width="0dp"
+        android:id="@+id/smart"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tab">
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/chat_rlv"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="@dimen/dp_8" />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:paddingHorizontal="@dimen/dp_16"
+        android:layout_height="wrap_content"
+        android:paddingVertical="@dimen/dp_10"
+
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:paddingVertical="@dimen/dp_8"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:paddingHorizontal="@dimen/dp_12"
+            android:background="@drawable/conner_skocke_gray_30"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/et_content"
+                android:textSize="@dimen/sp_13"
+                android:hint="发消息..."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"/>
+        </RelativeLayout>
+        <ImageView
+            android:layout_width="@dimen/dp_24"
+            android:layout_gravity="bottom"
+            android:id="@+id/photo"
+            android:layout_marginBottom="@dimen/dp_6"
+            android:layout_marginHorizontal="@dimen/dp_12"
+            android:background="@mipmap/sendimg"
+            android:layout_height="@dimen/dp_24"/>
+        <ImageView
+            android:layout_gravity="bottom"
+            android:layout_width="@dimen/dp_24"
+            android:id="@+id/send"
+            android:layout_marginBottom="@dimen/dp_6"
+            android:visibility="gone"
+            android:background="@mipmap/feijihui"
+            android:layout_height="@dimen/dp_24"/>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

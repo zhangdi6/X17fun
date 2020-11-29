@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/null_layout"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:scrollbars="none"
+    >
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:id="@+id/layout"
+    android:layout_height="match_parent"
+    >
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dp_200"
+        android:layout_marginHorizontal="@dimen/dp_24"
+        android:background="@drawable/conner_white_8dp">
+
+        <EditText
+            android:id="@+id/et_verify_code_1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_verify_code_edit"
+            android:inputType="number"
+            android:maxLength="1"
+            android:paddingLeft="16dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/et_verify_code_2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/price" />
+
+        <EditText
+            android:id="@+id/et_verify_code_2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_verify_code_edit"
+            android:inputType="number"
+            android:maxLength="1"
+            android:paddingLeft="16dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/et_verify_code_1"
+            app:layout_constraintEnd_toStartOf="@+id/et_verify_code_3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/et_verify_code_1" />
+
+        <EditText
+            android:id="@+id/et_verify_code_3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_verify_code_edit"
+            android:inputType="number"
+            android:maxLength="1"
+            android:paddingLeft="16dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/et_verify_code_2"
+            app:layout_constraintEnd_toStartOf="@+id/et_verify_code_4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/et_verify_code_2" />
+
+        <EditText
+            android:id="@+id/et_verify_code_4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_verify_code_edit"
+            android:inputType="number"
+            android:maxLength="1"
+            android:paddingLeft="16dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/et_verify_code_3"
+            app:layout_constraintEnd_toStartOf="@+id/et_verify_code_5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/et_verify_code_3" />
+
+        <EditText
+            android:id="@+id/et_verify_code_5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_verify_code_edit"
+            android:inputType="number"
+            android:maxLength="1"
+            android:paddingLeft="16dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/et_verify_code_4"
+            app:layout_constraintEnd_toStartOf="@+id/et_verify_code_6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/et_verify_code_4" />
+
+        <EditText
+            android:id="@+id/et_verify_code_6"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_verify_code_edit"
+            android:inputType="number"
+            android:maxLength="1"
+            android:paddingLeft="16dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/et_verify_code_5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/et_verify_code_5" />
+
+        <EditText
+            android:id="@+id/et_verify_code_7"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:inputType="number"
+            android:maxLength="1"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="@dimen/dp_36"
+            android:layout_height="@dimen/dp_36"
+            android:layout_marginEnd="8dp"
+            android:paddingHorizontal="@dimen/dp_10"
+            android:paddingVertical="@dimen/dp_10"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/title"
+            app:srcCompat="@mipmap/close" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="1000.00"
+            android:textColor="#333333"
+            android:textSize="24sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/title"
+            app:layout_constraintStart_toStartOf="@+id/title"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="输入密码"
+            android:textColor="@color/tv333"
+            android:textSize="@dimen/sp_15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tag_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="密码有误，请重新输入"
+            android:textColor="#ff4848"
+            android:textSize="@dimen/sp_13"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="@+id/et_verify_code_1"
+            app:layout_constraintTop_toBottomOf="@+id/et_verify_code_1" />
+
+        <TextView
+            android:id="@+id/forget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="忘记密码"
+            android:textColor="#666666"
+            android:textSize="@dimen/sp_13"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_verify_code_1" />
+    </android.support.constraint.ConstraintLayout>
+</RelativeLayout>
+
+</RelativeLayout>
